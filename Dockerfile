@@ -6,7 +6,7 @@ ENV NODE_ENV=production
 
 RUN apk add --update python make g++
 
-RUN yarn add \
+RUN yarn global add \
 verdaccio-bitbucket \
 verdaccio-bitbucket-server \
 verdaccio-ldap \
@@ -22,6 +22,7 @@ verdaccio-profile-api \
 verdaccio-https \
 verdaccio-memory \
 verdaccio-s3-storage \
-verdaccio-google-cloud
+verdaccio-google-cloud \
+--prefix /usr/local
 
 USER verdaccio
